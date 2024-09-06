@@ -1,0 +1,115 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3f37c9; /* Main background color */
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #3a0ca3;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#form-section {
+    background-color: #2ec4b6; /* Form container background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+input[type="number"], select {
+    background-color: #ffffff;
+    color: #000;
+}
+
+button {
+    background-color: #0077b6;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0096c7;
+}
+
+#results-section {
+    margin-top: 20px;
+    color: #000000;
+}
+
+canvas {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#weppResult, #tillageResult {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#heatmap, #terrain-visualization {
+    margin-top: 20px;
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, select, button {
+        font-size: 0.9rem;
+    }
+
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+}

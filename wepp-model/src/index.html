@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Erosion Model</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Erosion Model</h1>
+        
+        <div id="form-section">
+            <form id="erosionForm">
+                <div class="form-group">
+                    <label for="slope">Slope (%):</label>
+                    <input type="number" id="slope" name="slope" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rainfall">Rainfall (mm):</label>
+                    <input type="number" id="rainfall" name="rainfall" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cropCover">Crop Cover (%):</label>
+                    <input type="number" id="cropCover" name="cropCover" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tillageIntensity">Tillage Intensity:</label>
+                    <input type="number" id="tillageIntensity" name="tillageIntensity" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="kFactor">K Factor (Soil Erodibility):</label>
+                    <input type="number" id="kFactor" name="kFactor" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lFactor">L Factor (Slope Length):</label>
+                    <input type="number" id="lFactor" name="lFactor" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="soilMoisture">Soil Moisture (%):</label>
+                    <input type="number" id="soilMoisture" name="soilMoisture" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tillageType">Tillage Type:</label>
+                    <select id="tillageType" name="tillageType">
+                        <option value="no-till">No-till</option>
+                        <option value="conventional">Conventional</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="uploadData">Upload Historical Data (CSV):</label>
+                    <input type="file" id="uploadData" accept=".csv">
+                </div>
+
+                <button type="button" id="runModels">Run Models</button>
+            </form>
+        </div>
+
+        <div id="results-section">
+            <div id="error-message"></div>
+            <div id="weppResult">WEPP Erosion Rate: -</div>
+            <div id="tillageResult">Tillage Erosion: -</div>
+            <div id="historicalComparison"></div>
+
+            <!-- Interactive Graph -->
+            <canvas id="erosionChart" width="400" height="200"></canvas>
+
+            <!-- Heatmap for Erosion Susceptibility -->
+            <div id="heatmap"></div>
+
+            <!-- 3D Terrain Visualization -->
+            <div id="terrain-visualization"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
